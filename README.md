@@ -4,7 +4,7 @@
 <b>Discipline | <b>Physical Science
 :--|:--|
 <b> Lab | <b> Physics Lab
-<b> Experiment|     <b>  To determine the wavelength of sodium light by Newtons ring experiment
+<b> Experiment|   <b>  To determine the wavelength of sodium light by Newtons ring experiment
 
 ### About the Experiment 
 
@@ -14,7 +14,7 @@ The wavelength of sodium light can be determined using the Newton's Ring experim
 :--|:--|
 <b> Institute | <b> Rajkiya Engineering College Banda 
 <b> Email id|     <b> ashutosh.tiwari@recbanda.ac.in
-<b> Department | Mechanical Engineering
+<b> Department | Applied Science and Humanities
 
 ### Contributors List
 
