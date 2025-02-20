@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1366 768">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="580.8" y1="497.1" x2="663.2" y2="497.1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1">
+    <image width="541" height="212" transform="translate(305 486)" xlink:href="newton ring-1.png"/>
+  </g>
+  <g id="Layer_1_copy_4">
+    <image width="512" height="93" transform="translate(340.5 565.6) scale(.9)" xlink:href="newton ring-2.png"/>
+  </g>
+  <g id="Layer_1_copy_6">
+    <image width="512" height="105" transform="translate(399.5 485) scale(.7)" xlink:href="newton ring-3.png"/>
+    <image width="512" height="78" transform="translate(363.2 241.3) scale(.4)" xlink:href="newton ring-4.png"/>
+  </g>
+  <g id="Layer_1_copy_9">
+    <image width="512" height="40" transform="translate(389.7 591.5) scale(.7)" xlink:href="newton ring-5.png"/>
+    <image width="512" height="372" transform="translate(387.5 535.4) scale(.3)" xlink:href="newton ring-6.png"/>
+    <image width="512" height="318" transform="translate(421.4 538.5) scale(.2)" xlink:href="newton ring-7.png"/>
+    <image width="115" height="512" transform="translate(416.3 196.3) scale(.7)" xlink:href="newton ring-8.png"/>
+    <image width="488" height="512" transform="translate(402.1 109.7) scale(.2)" xlink:href="newton ring-9.png"/>
+  </g>
+  <g id="Layer_1_copy_5">
+    <g>
+      <image width="512" height="353" transform="translate(540.3 452) scale(.3)" xlink:href="newton ring-10.png"/>
+      <g>
+        <path d="M663.2,495.9c.8,21.3-17.7,39.2-41.2,39.2s-42-17.9-41.2-39.2c.8-20.5,19.2-36.6,41.2-36.6s40.5,16.1,41.2,36.6Z"/>
+        <path class="st0" d="M622,460.2c10.4,0,20.4,3.7,27.9,10.4,7.6,6.7,11.9,15.7,12.3,25.3.3,9.5-3.2,18.6-10.1,25.7-7.6,7.9-18.6,12.4-30.1,12.4s-22.5-4.5-30.1-12.4c-6.8-7.1-10.4-16.2-10.1-25.7.4-9.6,4.7-18.6,12.3-25.3,7.6-6.7,17.5-10.4,27.9-10.4M622,459.2c-22,0-40.5,16.1-41.2,36.6-.8,21.3,17.6,39.2,41.2,39.2s42-17.9,41.2-39.2c-.7-20.5-19.2-36.6-41.2-36.6h0Z"/>
+      </g>
+    </g>
+    <g>
+      <image width="175" height="512" transform="translate(589.1 35.4) scale(.3)" xlink:href="newton ring-11.png"/>
+      <image width="512" height="211" transform="translate(587.2 29.4) scale(0)" xlink:href="newton ring-12.png"/>
+    </g>
+    <image width="512" height="215" transform="translate(572.4 393.7) scale(.2)" xlink:href="newton ring-13.png"/>
+    <image width="150" height="512" transform="translate(567.5 104) scale(.6)" xlink:href="newton ring-14.png"/>
+  </g>
+</svg>

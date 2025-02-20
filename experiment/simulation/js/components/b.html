@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Table Redirect</title>
+</head>
+<body>
+    <div class="slider-container" style="text-align: center;">
+        <label for="sizeSelect">Radius of Curvature:</label><br>
+        <select id="sizeSelect">
+            <option value="Table2.html">100cm</option>
+            <option value="Table3.html">110cm</option>
+            <option value="Table4.html">115cm</option>
+            <option value="Table5.html">120cm</option>
+            <option value="Table6.html">125cm</option>
+        </select>
+    </div>
+
+    <div class="slider-container" style="text-align: center; margin-top: 10px;">
+        <button onclick="redirectToTable()">Calculate</button>
+    </div>
+
+    <script>
+        function redirectToTable() {
+            var selectedFile = document.getElementById("sizeSelect").value;
+            window.location.href = selectedFile;
+        }
+    </script>
+</body>
+</html>
