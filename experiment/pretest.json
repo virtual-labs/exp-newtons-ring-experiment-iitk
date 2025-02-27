@@ -11,7 +11,7 @@
       },
       "explanations": {
         "a": "Explanation 2",
-        "b": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 1,
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
@@ -28,7 +28,7 @@
       },
       "explanations": {
         "a": "Explanation 2",
-        "b": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 1",
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
@@ -46,7 +46,7 @@
       "explanations": {
         "a": "Explanation 2",
         "b": "Explanation 2",
-        "c": "Explanation 1  <a href='www.google.com'>here</a>",
+        "c": "Explanation 1",
         "d": "Explanation 2"
       },
       "correctAnswer": "c",
