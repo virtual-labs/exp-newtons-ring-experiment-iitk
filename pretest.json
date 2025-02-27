@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What causes the formation of Newton’s Rings?",
+      "answers": {
+        "a": "Diffraction of light",
+        "b": "Interference of light",
+        "c": "Reflection of light",
+        "d": "Refraction of light"
+      },
+      "explanations": {
+        "a": "Diffraction is the bending of light waves around obstacles, which is not responsible for Newton’s Rings.",
+        "b": "Correct. Newton’s Rings are formed due to the interference of light waves reflected from the top and bottom surfaces of the air film between a plano-convex lens and a glass plate.",
+        "c": "Reflection alone does not create the ring pattern; interference is necessary.",
+        "d": "Refraction involves bending of light at interfaces, which is unrelated to Newton’s Rings."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Why do Newton’s Rings have a concentric circular pattern?",
+      "answers": {
+        "a": "Due to diffraction effects",
+        "b": "Because of the varying thickness of the air film",
+        "c": "Due to uniform reflection from the lens",
+        "d": "Because of the wavelength of light"
+      },
+      "explanations": {
+        "a": "Diffraction is not responsible for the ring formation.",
+        "b": "Correct. The circular pattern is due to the radial variation in the thickness of the air film between the plano-convex lens and the glass plate.",
+        "c": "Reflection alone does not explain the circular pattern.",
+        "d": "Wavelength influences ring spacing, not their circular shape."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What is the condition for constructive interference in Newton’s Rings?",
+      "answers": {
+        "a": "2t = mλ",
+        "b": "2t = (2m−1) λ/2",
+        "c": "t = mλ/2",
+        "d": "t = (2m+1)λ"
+      },
+      "explanations": {
+        "a": "Correct. Constructive interference (bright rings) occurs when the path difference is an integral multiple of the wavelength.",
+        "b": "This represents the condition for destructive interference.",
+        "c": "This does not correctly describe the interference condition.",
+        "d": "This is an incorrect formulation of the interference condition."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Why is the central spot in Newton’s Rings dark?",
+      "answers": {
+        "a": "Due to destructive interference",
+        "b": "Due to constructive interference",
+        "c": "Because light does not reach the center",
+        "d": "Due to the absence of an air film at the center"
+      },
+      "explanations": {
+        "a": "Correct. Destructive interference occurs at the center because the path difference is zero with a phase change of π at the glass surface.",
+        "b": "Constructive interference would create a bright spot, which is not observed.",
+        "c": "Light does reach the center but undergoes destructive interference.",
+        "d": "While the air film is minimal, interference is the main reason."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. How does the wavelength of light affect the ring spacing in Newton’s Rings?",
+      "answers": {
+        "a": "Larger wavelength increases ring spacing",
+        "b": "Smaller wavelength increases ring spacing",
+        "c": "Wavelength has no effect on ring spacing",
+        "d": "Ring spacing remains constant"
+      },
+      "explanations": {
+        "a": "Correct. The ring spacing is directly proportional to the wavelength of the light used.",
+        "b": "A smaller wavelength results in narrower rings.",
+        "c": "Wavelength plays a crucial role in determining fringe width.",
+        "d": "Ring spacing varies with wavelength."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. How does replacing air with a liquid in Newton’s Rings affect the ring pattern?",
+      "answers": {
+        "a": "The rings become closer together",
+        "b": "The rings become wider",
+        "c": "The rings disappear",
+        "d": "The rings remain unchanged"
+      },
+      "explanations": {
+        "a": "Correct. A liquid with a higher refractive index reduces the effective wavelength, making the rings closer.",
+        "b": "Ring spacing decreases, not increases, with a liquid medium.",
+        "c": "The rings do not disappear; their spacing changes.",
+        "d": "The rings are affected by the refractive index of the medium."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "7. How is Newton’s Rings used to determine the wavelength of light?",
+      "answers": {
+        "a": "By measuring the diameter of rings",
+        "b": "By counting the number of rings",
+        "c": "By using a diffraction grating",
+        "d": "By measuring the intensity of light"
+      },
+      "explanations": {
+        "a": "Correct. The diameter of rings is used in a formula to calculate the wavelength.",
+        "b": "Counting rings alone does not give the wavelength without measurements.",
+        "c": "Diffraction gratings are a different method for wavelength determination.",
+        "d": "Intensity measurement is not related to wavelength determination."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. Why are Newton’s Rings more distinct when using monochromatic light?",
+      "answers": {
+        "a": "Monochromatic light enhances contrast",
+        "b": "Monochromatic light is brighter",
+        "c": "White light does not produce interference",
+        "d": "Monochromatic light has a shorter wavelength"
+      },
+      "explanations": {
+        "a": "Correct. Monochromatic light ensures a uniform interference pattern with distinct bright and dark rings.",
+        "b": "Brightness does not directly affect the clarity of the rings.",
+        "c": "White light produces rings but with overlapping colors, reducing clarity.",
+        "d": "Wavelength affects ring spacing, not clarity."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. How does the radius of curvature of the lens affect Newton’s Rings?",
+      "answers": {
+        "a": "Larger radius increases ring spacing",
+        "b": "Larger radius decreases ring spacing",
+        "c": "Radius of curvature has no effect",
+        "d": "Radius of curvature affects brightness only"
+      },
+      "explanations": {
+        "a": "Correct. A lens with a larger radius of curvature results in a wider spacing between rings.",
+        "b": "A smaller radius of curvature reduces ring spacing.",
+        "c": "Radius of curvature directly affects the ring spacing.",
+        "d": "Brightness is affected by intensity, not curvature."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. What happens if the light source is slightly tilted in Newton’s Rings experiment?",
+      "answers": {
+        "a": "The rings become distorted",
+        "b": "The rings remain unchanged",
+        "c": "The rings disappear",
+        "d": "The rings become smaller"
+      },
+      "explanations": {
+        "a": "Correct. A tilted light source results in an asymmetric interference pattern.",
+        "b": "The pattern changes when the light source is tilted.",
+        "c": "The rings do not disappear but lose symmetry.",
+        "d": "Ring size depends on wavelength and curvature, not tilt."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    }
+  ]
+}

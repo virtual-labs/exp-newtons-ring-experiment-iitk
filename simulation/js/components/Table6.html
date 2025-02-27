@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's Rings Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid black;
+            background: radial-gradient(circle, yellow, red);
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Newton's Rings Simulation</h2>
+    <canvas id="ringsCanvas" width="600" height="600"></canvas>
+    <table>
+        <thead>
+            <tr>
+                <th>Ring No.</th>
+                <th>Right Edge X (cm)</th>
+                <th>Left Edge X (cm)</th>
+                <th>Diameter D (cm)</th>
+                <th>D² (cm²)</th>
+                <th>D²ₙ₊₂ - D²ₙ (cm²)</th>
+                <th>Wavelength (Å)</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable"></tbody>
+    </table>
+
+    <script>
+        const canvas = document.getElementById('ringsCanvas');
+        const ctx = canvas.getContext('2d');
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const dataTable = document.getElementById('dataTable');
+
+        const rightEdgeValues = [2.54, 2.57, 2.61, 2.63, 2.66, 2.67, 2.70, 2.71];
+        const leftEdgeValues = [2.38, 2.35, 2.32, 2.30, 2.29, 2.26, 2.25, 2.24];
+        const diameterValues = [0.16, 0.22, 0.29, 0.33, 0.38, 0.41, 0.45, 0.47];
+        const diameterSquaredValues = [0.026569, 0.047524, 0.084919, 0.105874, 0.143269, 0.164224, 0.201619, 0.222574];
+        const differenceValues = [null,0.05835, 0.05835, 0.05835, 0.05835, 0.05835, 0.05835, 0.05835, 0.05835];
+
+
+        function drawRings() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = 'black';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 10, 0, 2 * Math.PI);
+            ctx.fill();
+
+            for (let i = 1; i <= rightEdgeValues.length; i++) {
+                const radius = 10 + i * (20 - i * 0.8);
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+                ctx.strokeStyle = 'black';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                ctx.fillStyle = 'green';
+                ctx.beginPath();
+                ctx.arc(centerX + radius, centerY, 5, 0, 2 * Math.PI);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.arc(centerX - radius, centerY, 5, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        }
+
+        canvas.addEventListener('click', (event) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            for (let i = 0; i < rightEdgeValues.length; i++) {
+                const radius = 10 + (i + 1) * (20 - (i + 1) * 0.8);
+                const rightX = centerX + radius;
+                const leftX = centerX - radius;
+                const distanceToRight = Math.sqrt((x - rightX) ** 2 + (y - centerY) ** 2);
+                const distanceToLeft = Math.sqrt((x - leftX) ** 2 + (y - centerY) ** 2);
+
+                if (distanceToRight <= 5 || distanceToLeft <= 5) {
+                    let row = dataTable.rows[i] || dataTable.insertRow();
+                    if (row.cells.length === 0) {
+                        row.insertCell(0).innerText = i + 1;
+                        row.insertCell(1).innerText = "-";
+                        row.insertCell(2).innerText = "-";
+                        row.insertCell(3).innerText = "-";
+                        row.insertCell(4).innerText = "-";
+                        row.insertCell(5).innerText = "-";
+                        row.insertCell(6).innerHTML = `<button onclick="calculateWavelength(this, ${i})">Calculate</button><br><span id="wavelength-${i}"></span>`;
+                    }
+
+                    if (distanceToRight <= 5) {
+                        row.cells[1].innerText = rightEdgeValues[i].toFixed(3);
+                    }
+                    if (distanceToLeft <= 5) {
+                        row.cells[2].innerText = leftEdgeValues[i].toFixed(3);
+                    }
+
+                    const rightEdge = parseFloat(row.cells[1].innerText);
+                    const leftEdge = parseFloat(row.cells[2].innerText);
+                    if (!isNaN(rightEdge) && !isNaN(leftEdge)) {
+                        row.cells[3].innerText = diameterValues[i].toFixed(3);
+                        row.cells[4].innerText = diameterSquaredValues[i].toFixed(6);
+                        if (i > 0) {
+                            row.cells[5].innerText = differenceValues[i - 1].toFixed(6);
+                        }
+                    }
+                }
+            }
+        });
+
+        function calculateWavelength(button, index) {
+            const R = 125;
+            const m = 2;
+            const differenceValue = differenceValues[index - 1]; 
+
+            if (differenceValue !== null) {
+                const lambda = (differenceValue / (4 * m * R)) * 1e8; // Convert to Angstrom (Å)
+                document.getElementById(`wavelength-${index}`).innerText = lambda.toFixed(1) + " Å";
+            } else {
+                document.getElementById(`wavelength-${index}`).innerText = "N/A";
+            }
+        }
+
+        drawRings();
+    </script>
+</body>
+</html>

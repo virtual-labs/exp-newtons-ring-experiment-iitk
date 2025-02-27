@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Focus</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .simulation-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            margin: auto;
+            overflow: hidden;
+        }
+        .simulation {
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.7) 60%);
+            position: absolute;
+            transition: transform 0.3s ease;
+        }
+        .scope {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.3);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .slider {
+            width: 50%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simulation Focus Control</h2>
+    <div class="simulation-container">
+        <div class="simulation" id="simulation">
+            <div class="scope"></div>
+        </div>
+    </div>
+    
+    <input type="range" id="focusSlider" class="slider" min="-100" max="100" value="0">
+
+    <script>
+        const slider = document.getElementById("focusSlider");
+        const simulation = document.getElementById("simulation");
+
+        slider.addEventListener("input", function () {
+            const value = slider.value;
+            simulation.style.transform = `translate(${value}px, ${value}px)`;
+        });
+    </script>
+
+</body>
+</html>

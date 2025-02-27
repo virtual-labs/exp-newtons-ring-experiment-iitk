@@ -1,0 +1,16 @@
+
+/home/runner/work/exp-newtons-ring-experiment-iitk/exp-newtons-ring-experiment-iitk/experiment/simulation/js/components/movement.js
+  64:10  warning  'updateRadiusValue' is defined but never used      no-unused-vars
+  68:10  warning  'updateMicroscopeValue' is defined but never used  no-unused-vars
+  72:10  warning  'displayValue' is defined but never used           no-unused-vars
+
+/home/runner/work/exp-newtons-ring-experiment-iitk/exp-newtons-ring-experiment-iitk/experiment/simulation/js/components/simulation.js
+  356:74  warning  'result' is not defined                      no-undef
+  399:10  warning  'redirectToTable' is defined but never used  no-unused-vars
+
+/home/runner/work/exp-newtons-ring-experiment-iitk/exp-newtons-ring-experiment-iitk/experiment/simulation/js/main.js
+  2:10  warning  'openNav' is defined but never used   no-unused-vars
+  6:12  warning  'closeNav' is defined but never used  no-unused-vars
+
+✖ 7 problems (0 errors, 7 warnings)
+
